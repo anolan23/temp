@@ -1,0 +1,16 @@
+.highlight {
+  color: var(--color-primary-orange);
+}
+
+.empty {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #34333a;
+  &--small {
+    font-size: 1.4rem;
+  }
+}

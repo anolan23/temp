@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  background-color: rgba(black, $alpha: 0.5);
+  transition: all 0.1s;
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-width: 55rem;
+  max-width: 60rem;
+  max-height: 90vh;
+  padding: 2.4rem 3.2rem;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  animation: moveInBottom 0.4s ease;
+}
+
+.close {
+  align-self: flex-end;
+  cursor: pointer;
+  color: #828282;
+}

@@ -1,0 +1,26 @@
+.root {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem 0;
+  margin: 1.6rem 0;
+  &.active {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background-color: var(--color-primary-orange);
+      border-top-right-radius: 9999px;
+      border-bottom-right-radius: 9999px;
+    }
+  }
+}
+
+.icon {
+  color: #454545;
+}

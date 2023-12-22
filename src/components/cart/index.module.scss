@@ -1,0 +1,30 @@
+.cart {
+  position: relative;
+  height: 4.2rem;
+  width: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--color-primary-orange);
+  cursor: pointer;
+  & span {
+    color: white;
+    font-size: 2rem;
+  }
+}
+
+.count {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb5757;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  color: white;
+}

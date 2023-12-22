@@ -1,0 +1,30 @@
+.root {
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 0.8rem);
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 2px 12px 0px #0000000a;
+  border-radius: 2.4rem;
+}
+
+.menu {
+  max-height: 25rem;
+  overflow-y: overlay;
+}
+
+.item {
+  padding: 1.1rem 2rem;
+  border-radius: 1.2rem;
+  font-size: 1.8rem;
+  color: #34333a;
+  cursor: pointer;
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+.text {
+}

@@ -1,0 +1,33 @@
+.root {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 3.2rem 8rem;
+  padding-right: calc(8rem - 17px);
+  @media screen and (max-width: 1100px) {
+    padding: 3.2rem;
+    padding-right: calc(4.8rem - 17px);
+  }
+  @media screen and (max-width: 550px) {
+    padding: 3.2rem 1.6rem;
+    padding-right: calc(3.2rem - 17px);
+  }
+}
+
+.trending {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.4rem;
+  @media screen and (max-width: 1250px) {
+    gap: 3.2rem;
+  }
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+.summary {
+  flex: 1;
+}

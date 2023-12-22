@@ -1,0 +1,25 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.4rem;
+  width: 2.4rem;
+  border: 2px solid var(--color-primary-orange);
+  border-radius: 4px;
+  cursor: pointer;
+  & input {
+    display: none;
+    &:checked {
+      & ~ .checkbox__checkmark::after {
+        content: '✔';
+        color: var(--color-primary-orange);
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.checkmark {
+}

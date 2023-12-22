@@ -1,0 +1,81 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.2rem 2.1rem;
+  background-color: white;
+  border-radius: 1.2rem;
+  box-shadow: 0px 2px 12px 0px #0000000d;
+  cursor: pointer;
+  @media screen and (max-width: 450px) {
+    padding: 2.2rem 2.1rem;
+    padding-right: 8px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 2.8rem;
+  }
+}
+
+.title {
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  color: #c1c1c4;
+}
+
+.calendar {
+  margin-right: 1.6rem;
+  @media screen and (max-width: 950px) {
+    display: none;
+  }
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+}
+
+.date {
+  font-size: 1.2rem;
+  @media screen and (max-width: 950px) {
+    display: none;
+  }
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+}
+
+.right {
+  color: var(--color-primary-orange);
+  font-size: 3.2rem;
+  line-height: 0.5;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  margin: 0 3.2rem;
+  padding: 4px 8px;
+  border: 1px solid #56ccf2;
+  border-radius: 8px;
+  @media screen and (max-width: 550px) {
+    margin: 0 8px;
+  }
+  &.cancelled {
+    border-color: #eb5757;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    color: #56ccf2;
+    &.cancelled {
+      color: #eb5757;
+    }
+  }
+}
