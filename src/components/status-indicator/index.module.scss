@@ -1,0 +1,35 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon {
+  font-weight: 600;
+}
+
+.text {
+  margin-left: 4px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+//Types
+.info {
+  color: var(--font-color-status-info);
+}
+.warning {
+  color: var(--font-color-status-warning);
+}
+.success {
+  color: var(--font-color-status-success);
+}
+.error {
+  color: var(--font-color-status-error);
+}
+.pending {
+  color: var(--font-color-status-inactive);
+}
+.in-progress {
+  color: var(--font-color-status-inactive);
+}

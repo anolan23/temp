@@ -7,20 +7,6 @@ import { ListPage } from './pages/list';
 import Statistics from './pages/statistics';
 
 function App() {
-  // const [state] = useStore();
-  // const { fetchItems, setStore, setShowCancelListPopup } = useActions();
-
-  // useEffect(() => {
-  //   const store = JSON.parse(localStorage.getItem('store'));
-  //   store && setStore(store);
-  // }, []);
-
-  // useLocalStorage();
-
-  // useEffect(() => {
-  //   fetchItems();
-  // }, []);
-
   return (
     <BrowserRouter>
       <Routes>
