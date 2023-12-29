@@ -1,10 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import { DashboardPage } from './pages/dashboard';
-import HistoryPage from './pages/history';
-import ItemsPage from './pages/items';
-import { ListPage } from './pages/list';
-import Statistics from './pages/statistics';
+import Home from './pages/home';
+import ReceiptPage from './pages/receipts/[receiptId]';
 
 function App() {
   return (
@@ -12,10 +10,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/dashboard" />} />
         <Route path="/dashboard" element={<DashboardPage />}>
-          <Route path="" element={<ItemsPage />} />
-          <Route path="history" element={<HistoryPage />} />
-          <Route path="history/:id" element={<ListPage />} />
-          <Route path="statistics" element={<Statistics />} />
+          <Route path="" element={<Home />} />
+          <Route path="receipts" element={null} />
+          <Route path="receipts/:receiptId" element={<ReceiptPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

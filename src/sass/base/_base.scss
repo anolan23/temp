@@ -30,8 +30,12 @@
 
   --color-border-tabs: var(--color-black-10);
 
+  --font-color: #34333A;
+  --font-color-secondary: #5D6A81;
   --font-color-tabs: #767676;
   --font-color-tabs-active: var(--color-primary-orange, #f9a109);
+
+  --shadow: box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.05);
 }
 
 html {
@@ -56,6 +60,6 @@ textarea {
 
 button {
   font-family: inherit;
-  font-weight: 700;
   font-size: inherit;
+  color: inherit;
 }

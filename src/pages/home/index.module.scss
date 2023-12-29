@@ -1,0 +1,37 @@
+.root {
+  padding: 3.2rem 8rem;
+  padding-right: calc(8rem - 17px);
+  @media screen and (max-width: 1100px) {
+    padding: 3.2rem;
+    padding-right: calc(4.8rem - 17px);
+  }
+  @media screen and (max-width: 550px) {
+    padding: 3.2rem 1.6rem;
+    padding-right: calc(3.2rem - 17px);
+  }
+}
+
+.heading {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5.6rem;
+  @media only screen and (max-width: 1280px) {
+    grid-auto-flow: row;
+    gap: 3.2rem;
+  }
+}
+
+.category {
+  margin: 4.8rem 0;
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.receipts {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
