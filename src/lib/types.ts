@@ -22,3 +22,10 @@ export type ReceiptItemData = {
   total_price: string | null;
   category: string;
 };
+
+export type Category = {
+  created_at: string;
+  updated_at: string;
+  id: 1;
+  label: string;
+};

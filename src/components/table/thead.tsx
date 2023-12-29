@@ -47,6 +47,7 @@ export function Thead({ table, resizableColumns, wrapLines }: TheadProps) {
                     >
                       {renderCell()}
                       <MaterialIcon
+                        fontSize="2rem"
                         icon="expand_more"
                         className={clsx(
                           styles.icon,
