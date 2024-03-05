@@ -1,8 +1,8 @@
 import useSWR from 'swr';
-import { Search } from '../../components/search';
-import styles from './index.module.scss';
-import { getReceipts } from '../../lib/api/receipts';
+import { Button } from '../../components/button';
 import { Receipt } from '../../components/receipt';
+import { getReceipts } from '../../lib/api/receipts';
+import styles from './index.module.scss';
 
 function Home() {
   const { data: receipts } = useSWR('/receipts', getReceipts);
@@ -11,10 +11,12 @@ function Home() {
     <div className={styles.root}>
       <div className={styles.heading}>
         <h1>
-          <span className="highlight">Receipt Ranger</span> allows you take your
-          shopping list wherever you go
+          <span className="highlight">Receipt Ranger</span> will automatically
+          analyze and categorize items from your scanned grocery receipts!
         </h1>
-        <Search />
+        <Button variant="link" to="/dashboard/receipts/add">
+          Add Receipt
+        </Button>
       </div>
       <div className={styles.receipts}>
         {receipts?.map((receipt) => (

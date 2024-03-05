@@ -1,0 +1,59 @@
+.root {
+  width: 100%;
+  display: flex;
+  padding: 4px 12px;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--font-color, #16191f);
+
+  &[data-highlighted] {
+    border: 2px solid var(--color-black-30);
+    border-radius: 8px;
+    background-color: rgba($color: #000000, $alpha: 0.04);
+  }
+
+  &[data-disabled] {
+    opacity: 0.25;
+  }
+}
+
+.icon {
+  color: inherit;
+  margin-right: 1.2rem;
+}
+
+.content {
+  flex: 1;
+}
+
+.label-content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.label {
+}
+
+.labeltag {
+  padding-left: 1.2rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: var(--font-color-secondary);
+}
+.tags {
+  font-size: 1.2rem;
+  color: var(--font-color-secondary);
+  display: flex;
+  align-items: stretch;
+}
+
+.tag {
+  &:not(:last-child) {
+    padding-right: 1.6rem;
+  }
+}

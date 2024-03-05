@@ -57,7 +57,7 @@ export function Card({
           {header}
         </div>
       )}
-      {children}
+      <div className={styles.content}>{children}</div>
       {footer && <div className={styles.footer}>{footer}</div>}
     </div>
   );

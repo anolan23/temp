@@ -1,0 +1,100 @@
+@import '../../sass/base/animations';
+
+.root {
+  position: relative;
+  &__placeholder {
+    font-weight: 400;
+    color: var(--font-color);
+  }
+}
+
+.toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1.2rem;
+  border: 1px solid #bfbfbf;
+  box-shadow: none;
+  border-radius: 8px;
+  background-color: var(--color-bg-input);
+  transition: border-color 0.1s;
+  cursor: pointer;
+  &[data-state='closed'] {
+    & .icon {
+      transform: rotate(90deg);
+    }
+  }
+  &[data-state='open'] {
+    & .icon {
+      transform: rotate(-90deg);
+    }
+  }
+  &:hover {
+    & .toggle__icon {
+      color: black;
+    }
+  }
+  &:focus,
+  &:focus-within {
+    border-color: var(--color-black-40);
+  }
+  &.error {
+    border-color: var(--color-red-40);
+    & .toggle__icon {
+      color: var(--color-red-40);
+    }
+  }
+  &.invalid {
+    border-color: var(--color-red-40);
+    border-left-width: 8px;
+    & .toggle__icon {
+      color: var(--color-red-40);
+    }
+  }
+}
+
+.label {
+  line-height: 20px;
+  font-size: 1.4rem;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 1.2rem;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  user-select: none;
+}
+
+.icon {
+  transition: transform 0.115s;
+}
+
+.single {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  white-space: nowrap;
+}
+
+.menu {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  margin-top: 4px;
+  border-radius: 8px;
+  padding: 1px;
+
+  border: 2px solid var(--color-black-20);
+  z-index: 3;
+  max-height: 40rem;
+  overflow-y: auto;
+  animation: open 0.115s ease;
+
+  &--close {
+    display: none;
+    box-shadow: none;
+  }
+}

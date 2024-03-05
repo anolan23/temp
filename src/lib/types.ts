@@ -29,3 +29,21 @@ export type Category = {
   id: 1;
   label: string;
 };
+
+export type UploadFileStatus =
+  | 'uploading'
+  | 'processing'
+  | 'complete'
+  | 'error';
+
+export type UploadFile = {
+  id: string;
+  file: File;
+  status: UploadFileStatus;
+};
+
+export type MonthlyTotalsResult = {
+  month_name: string;
+  total: string;
+  year: number;
+};

@@ -1,0 +1,11 @@
+.root {
+  border: 2px dashed var(--color-primary-orange);
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  cursor: pointer;
+
+  &.is-drag-over {
+    background-color: #f0f0f0;
+  }
+}

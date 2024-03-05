@@ -1,8 +1,10 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
-import { DashboardPage } from './pages/dashboard';
+import { DashboardPage } from './layouts/dashboard';
 import Home from './pages/home';
 import ReceiptPage from './pages/receipts/[receiptId]';
+import { AddReceiptPage } from './pages/receipts/add';
+import StatisticsPage from './pages/statistics';
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
         <Route path="/dashboard" element={<DashboardPage />}>
           <Route path="" element={<Home />} />
           <Route path="receipts" element={null} />
+          <Route path="receipts/add" element={<AddReceiptPage />} />
           <Route path="receipts/:receiptId" element={<ReceiptPage />} />
+          <Route path="statistics" element={<StatisticsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

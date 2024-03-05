@@ -1,14 +1,32 @@
 .root {
-  height: 100%;
-  min-height: 6.2rem;
-  padding: 0 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem 3.2rem;
   background-color: var(--color-primary-orange);
+  font-size: 2rem;
   color: white;
+  font-weight: bold;
   outline: none;
   border: none;
   white-space: nowrap;
   cursor: pointer;
   border-radius: 1.2rem;
+  transition: all 0.115s;
+
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    filter: brightness(90%);
+  }
+
+  &.primary {
+    background-color: var(--color-primary-orange);
+  }
 
   &.transparent {
     background-color: transparent;

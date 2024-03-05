@@ -11,6 +11,7 @@ import {
   TabsTrigger,
 } from '../../../components/tabs';
 import { useCategories } from '../../../hooks/use-categories';
+import { DateDisplay } from '../../../components/date-display';
 
 function ReceiptPage() {
   const { receiptId } = useParams();
@@ -19,15 +20,19 @@ function ReceiptPage() {
   const { data: receiptItems, isLoading: isItemsLoading } =
     useReceiptItems(receiptId);
   const { data: categories } = useCategories();
-  console.log(categories);
 
-  const { total_amount, store_name } = receipt || {};
+  const { total_amount, store_name, transaction_date } = receipt || {};
   const totalAmount = total_amount ? +total_amount : 0;
 
   return (
     <div className={styles.root}>
       <div className={styles.heading}>
-        <h1 className={styles.title}>{store_name}</h1>
+        <div>
+          <h1 className={styles.title}>{store_name}</h1>
+          <div>
+            {transaction_date && <DateDisplay dateString={transaction_date} />}
+          </div>
+        </div>
         <data className={styles.value} value={totalAmount}>
           USD {total_amount}
         </data>
@@ -46,7 +51,11 @@ function ReceiptPage() {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="receipt-data">
-            <ItemsTable data={receiptItems || []} loading={isItemsLoading} />
+            <ItemsTable
+              data={receiptItems || []}
+              categories={categories}
+              loading={isItemsLoading}
+            />
           </TabsContent>
         </Tabs>
       </div>

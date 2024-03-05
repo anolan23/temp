@@ -1,0 +1,9 @@
+.root {
+  border-bottom: 2px solid transparent;
+  &:last-child {
+    border-bottom: none;
+  }
+  &:not(:last-child) {
+    border-bottom-color: var(--color-border-divider, #e6e6e6);
+  }
+}
